@@ -12,6 +12,7 @@ import { FaMoneyCheck } from 'react-icons/fa';
 // import {EmojiHappy} from 'iconsax-react';
 import Vector from "../assets/Vector.png"
 import logo from "../assets/logo.png"
+import { Link } from 'react-router-dom';
 
 
 const Sidebar = () => {
@@ -33,59 +34,75 @@ const Sidebar = () => {
 
                 {/* Home section */}
                 <div className='pt-[px] flex flex-col items-start   gap-[30px] text-[#787486] font-Inter '>
-                    <div className='flex group items-center cursor-pointer  gap-[16px] relative text-[#080809] duration-150'>
-                        <div className='sm:text-xl text-2xl z-20'>
-                            <BsFillGridFill  />
+                    <Link to="/dashboard">
+                        <div className='flex group items-center cursor-pointer  gap-[16px] relative text-[#080809] duration-150'>
+                            <div className='sm:text-xl text-2xl z-20'>
+                                <BsFillGridFill />
+                            </div>
+                            <h3 className='font-medium z-20 text-[15px] hidden sm:block '>DashBoard</h3>
+                            <div className='absolute  sm:w-56 w-10 sm:h-12 h-10 z-10  -left-2 bg-[#e6e8ea] rounded-2xl'></div>
                         </div>
-                        <h3 className='font-medium z-20 text-[15px] hidden sm:block '>DashBoard</h3>
-                        <div className='absolute  sm:w-56 w-10 sm:h-12 h-10 z-10  -left-2 bg-[#e6e8ea] rounded-2xl'></div>
-                    </div>
+                    </Link>
 
-                    <div className='flex group items-center gap-[16px] cursor-pointer  relative hover:text-[#080809] duration-150 '>
-                        <div className='sm:text-xl text-2xl z-20 '>
-                            <CgOrganisation className='' />
+                    <Link to="/organisation-details">
+                        <div className='flex group items-center gap-[16px] cursor-pointer  relative hover:text-[#080809] duration-150 '>
+                            <div className='sm:text-xl text-2xl z-20 '>
+                                <CgOrganisation className='' />
+                            </div>
+                            <h3 className='font-medium z-20 text-[15px] hidden sm:block'>Organisation Details</h3>
+                            <div className='absolute  sm:w-56 w-10 sm:h-12 h-10 z-10  -left-2 group-hover:bg-[#e6e8ea] rounded-2xl'></div>
                         </div>
-                        <h3 className='font-medium z-20 text-[15px] hidden sm:block'>Organisation Details</h3>
-                        <div className='absolute  sm:w-56 w-10 sm:h-12 h-10 z-10  -left-2 group-hover:bg-[#e6e8ea] rounded-2xl'></div>
-                    </div>
+                    </Link>
+                    <Link to="/sales">
+                        <div className='flex group group items-center gap-[16px] cursor-pointer  relative hover:text-[#080809] duration-150'>
+                            <div className=' z-20 sm:text-xl text-2xl '>
+                                <MdPointOfSale />
+                            </div>
+                            <h3 className=' z-20 font-medium text-[15px] hidden sm:block'>Sales</h3>
+                            <div className='absolute  sm:w-56 w-10 sm:h-12 h-10 z-10  -left-2 group-hover:bg-[#e6e8ea] rounded-2xl'></div>
+                        </div>
+                    </Link>
 
-                    <div className='flex group group items-center gap-[16px] cursor-pointer  relative hover:text-[#080809] duration-150'>
-                        <div className=' z-20 sm:text-xl text-2xl '>
-                            <MdPointOfSale />
+                    <Link to="/purchase">
+                        <div className='flex group items-center gap-[16px] cursor-pointer  relative hover:text-[#080809] duration-150'>
+                            <div className=' z-20 sm:text-xl text-2xl'>
+                                <BiSolidPurchaseTag />
+                            </div>
+                            <h3 className=' z-20 font-medium text-[15px] hidden sm:block'>Purchase</h3>
+                            <div className='absolute  sm:w-56 w-10 sm:h-12 h-10 z-10  -left-2 group-hover:bg-[#e6e8ea] rounded-2xl'></div>
                         </div>
-                        <h3 className=' z-20 font-medium text-[15px] hidden sm:block'>Sales</h3>
-                        <div className='absolute  sm:w-56 w-10 sm:h-12 h-10 z-10  -left-2 group-hover:bg-[#e6e8ea] rounded-2xl'></div>
-                    </div>
-                    <div className='flex group items-center gap-[16px] cursor-pointer  relative hover:text-[#080809] duration-150'>
-                        <div className=' z-20 sm:text-xl text-2xl'>
-                            <BiSolidPurchaseTag  />
-                        </div>
-                        <h3 className=' z-20 font-medium text-[15px] hidden sm:block'>Purchase</h3>
-                        <div className='absolute  sm:w-56 w-10 sm:h-12 h-10 z-10  -left-2 group-hover:bg-[#e6e8ea] rounded-2xl'></div>
-                    </div>
-                    <div className='flex group items-center gap-[16px] cursor-pointer  relative hover:text-[#080809] duration-150'>
-                        <div className=' z-20 sm:text-xl text-2xl'>
-                            <MdAccountBalanceWallet  />
-                        </div>
-                        <h3 className=' z-20 font-medium text-[15px]  hidden sm:block'>Accounts</h3>
-                        <div className='absolute  sm:w-56 w-10 sm:h-12 h-10 z-10  -left-2 group-hover:bg-[#e6e8ea] rounded-2xl'></div>
-                    </div>
+                    </Link>
 
-                    <div className='flex group items-center gap-[16px] cursor-pointer  relative hover:text-[#080809] duration-150'>
-                        <div className=' z-20 sm:text-xl text-2xl'>
-                            <FaMoneyCheck />
+                    <Link to="/accounts">
+                        <div className='flex group items-center gap-[16px] cursor-pointer  relative hover:text-[#080809] duration-150'>
+                            <div className=' z-20 sm:text-xl text-2xl'>
+                                <MdAccountBalanceWallet />
+                            </div>
+                            <h3 className=' z-20 font-medium text-[15px]  hidden sm:block'>Accounts</h3>
+                            <div className='absolute  sm:w-56 w-10 sm:h-12 h-10 z-10  -left-2 group-hover:bg-[#e6e8ea] rounded-2xl'></div>
                         </div>
-                        <h3 className=' z-20 font-medium text-[15px]  hidden sm:block'>Income Statement</h3>
-                        <div className='absolute sm:w-56 w-10 sm:h-12 h-10 z-10  -left-2 group-hover:bg-[#e6e8ea] rounded-2xl'></div>
-                    </div>
+                    </Link>
 
-                    <div className='flex group items-center gap-[16px] cursor-pointer  relative hover:text-[#080809] duration-150'>
-                        <div className='sm:text-xl text-2xl z-20'>
-                            <BiSolidReport />
+                    <Link to="/income-statements">
+                        <div className='flex group items-center gap-[16px] cursor-pointer  relative hover:text-[#080809] duration-150'>
+                            <div className=' z-20 sm:text-xl text-2xl'>
+                                <FaMoneyCheck />
+                            </div>
+                            <h3 className=' z-20 font-medium text-[15px]  hidden sm:block'>Income Statement</h3>
+                            <div className='absolute sm:w-56 w-10 sm:h-12 h-10 z-10  -left-2 group-hover:bg-[#e6e8ea] rounded-2xl'></div>
                         </div>
-                        <h3 className='font-medium text-[15px] hidden sm:block z-20'>Reports</h3>
-                        <div className='absolute  sm:w-56 w-10 sm:h-12 h-10 z-10  -left-2 group-hover:bg-[#e6e8ea] rounded-2xl'></div>
-                    </div>
+                    </Link>
+
+                    <Link to="/report">
+                        <div className='flex group items-center gap-[16px] cursor-pointer  relative hover:text-[#080809] duration-150'>
+                            <div className='sm:text-xl text-2xl z-20'>
+                                <BiSolidReport />
+                            </div>
+                            <h3 className='font-medium text-[15px] hidden sm:block z-20'>Reports</h3>
+                            <div className='absolute  sm:w-56 w-10 sm:h-12 h-10 z-10  -left-2 group-hover:bg-[#e6e8ea] rounded-2xl'></div>
+                        </div>
+                    </Link>
+
                 </div>
 
                 {/* MY PROJECTS */}
@@ -158,7 +175,8 @@ const Sidebar = () => {
 
             </div>
 
-            {/* <hr className="h-px my-[73px] w-screen bg-gray-200 border-0 dark:bg-gray-700"/> */} </>
+            {/* <hr className="h-px my-[73px] w-screen bg-gray-200 border-0 dark:bg-gray-700"/> */}
+        </>
     )
 }
 
