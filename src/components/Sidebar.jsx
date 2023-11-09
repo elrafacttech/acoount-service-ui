@@ -23,7 +23,7 @@ const Sidebar = () => {
                     <div className='flex gap-12 items-center'>
                         <div className='flex gap-[13px]'>
                             <img className='w-7' src={logo} alt="" />
-                            <h1 className='text-base font-semibold text-[#0D062D] hidden sm:block pt-0.5'>Project Name</h1>
+                            <h1 className='text-base font-semibold text-[#0D062D] hidden sm:block pt-0.5'>ABC CORPORATION</h1>
                         </div>
                         {/* <div className='text-[#787486] text-lg hidden sm:block '>
                             <RxDoubleArrowLeft />
