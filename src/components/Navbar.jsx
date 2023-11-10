@@ -4,7 +4,6 @@ import {BsCalendar4Week} from 'react-icons/bs'
 import {BiMessageDetail} from 'react-icons/bi'
 import {IoIosNotificationsOutline} from 'react-icons/io'
 import {IoIosArrowDown} from 'react-icons/io'
-import logo from '../assets/profile.png'
 
 
 const Navbar = () => {
@@ -27,11 +26,11 @@ const Navbar = () => {
                     </div>
                     <div className='flex items-center gap-5'>
                         <div className=' hidden lg:block font-Inter text-right'>
-                            <h3 className='font-normal text-[#0D062D] text-sm'>Admin</h3>
-                            <p className='text-[#787486] text-sm'>Germany</p>
+                            <h3 className='font-normal text-[#0D062D] text-sm'>Anima Agrawal</h3>
+                            <p className='text-[#787486] text-sm'>U.P, India</p>
                         </div>
                         <div className='flex gap-3 items-center'>
-                            <img className='w-10 h-10 rounded-full object-cover ' src={logo} alt="logo"/>
+                            <img className='w-10 h-10 rounded-full object-cover ' src="https://images.pexels.com/photos/1542085/pexels-photo-1542085.jpeg?auto=compress&cs=tinysrgb&w=600" alt=""/>
                             <div className='text-[#292D32]'>
                                 <IoIosArrowDown size={20}/>
                             </div>
