@@ -1,0 +1,26 @@
+.accounts-table-container {
+    margin: 1rem;
+    padding: 1rem;
+  }
+  
+  .accounts-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .accounts-table th, .accounts-table td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 5px;
+  }
+  
+.select-dropdown {
+    border: 1px solid black; /* Black border */
+    color: black; /* Black text color */
+    /* Add other styles as needed */
+  }
+  
+ 
+ 
+  
