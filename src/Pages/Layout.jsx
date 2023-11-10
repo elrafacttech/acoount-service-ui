@@ -60,6 +60,11 @@ const Layout = ({ children }) => {
                   {children}
                  </>
                  :
+                 (location.pathname === '/addpurchase') ?
+                 <>
+                  {children}
+                 </>
+                 :
                  <>
                  
                  </>

@@ -35,7 +35,9 @@
     border: 1px solid #000; /* Adjust the cell border width and color as needed */
     padding: 8px; /* Optional: Add padding inside cells */
   }
- 
+ .right-current-period{
+  align-items: end;
+ }
   
   
   

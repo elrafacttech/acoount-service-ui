@@ -8,6 +8,7 @@ import Purchase from "./components/purchase/Purchase"
 import Accounts from "./components/accounts/Accounts"
 import { Income_Statement } from "./components/income_statement/Income_Statement"
 import Report from "./components/report/Report"
+import AddPurchase from "./components/purchase/AddPurchase"
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route path='/accounts' element={<Accounts />} />
             <Route path='/income-statements' element={<Income_Statement />} />
             <Route path='/report' element={<Report />} />
+            <Route path='/addpurchase' element={<AddPurchase />} />
          
         </Routes>
       </Router>
