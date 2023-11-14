@@ -41,7 +41,7 @@ const handleFormSubmit = async (e) => {
 return (
   <Layout>
     <form onSubmit={handleFormSubmit}>
-      <label htmlFor="productName" class="lableStyle-name">Product Name:</label>
+      <label htmlFor="productName" className="lableStyle-name">Product Name:</label>
       <input  class="form-group"  
         type="text"
         id="productName"
@@ -51,7 +51,7 @@ return (
       />
       <br />
       <br />
-      <label htmlFor="productCategory" class="lableStyle-cat">Product Category:</label>
+      <label htmlFor="productCategory" className="lableStyle-cat">Product Category:</label>
       <input class="form-group" 
         type="text"
         id="productCategory"
@@ -61,7 +61,7 @@ return (
       />
       <br />
       <br />
-      <label htmlFor="unitsPurchased" class="lableStyle-unitpurc">Units Purchased:</label>
+      <label htmlFor="unitsPurchased" className="lableStyle-unitpurc">Units Purchased:</label>
       <input class="form-group" 
         type="text"
         id="unitsPurchased"
@@ -71,7 +71,7 @@ return (
       />
       <br />
       <br />
-      <label htmlFor="unitCost" class="lableStyle-unitcost">Unit cost:</label>
+      <label htmlFor="unitCost" className="lableStyle-unitcost">Unit cost:</label>
       <input class="form-group" 
         type="text"
         id="unitCost"
@@ -81,7 +81,7 @@ return (
       />
       <br />
       <br />
-      <label htmlFor="vat" class="lableStyle-vat">VAT:</label>
+      <label htmlFor="vat" className="lableStyle-vat">VAT:</label>
       <input class="form-group" 
         type="text"
         id="vat"
@@ -91,7 +91,7 @@ return (
       />
       <br />
       <br />
-      <label htmlFor="paymentReceipt" class="lableStyle-cash">Cash/Credit:</label>
+      <label htmlFor="paymentReceipt" className="lableStyle-cash">Cash/Credit:</label>
       <input class="form-group" 
         type="text"
         id="paymentReceipt"
@@ -101,7 +101,7 @@ return (
       />
       <br />
       <br />
-      <button type="submit" class="submit">Add</button>
+      <button  id="addbtn" type="submit" className="submit">Add</button>
     </form>
   </Layout>
 );

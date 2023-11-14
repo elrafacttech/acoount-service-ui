@@ -112,7 +112,7 @@ return (
       />
       <br />
       <br />
-      <button type="submit" className="submit">Add</button>
+      <button id="addbtn" type="submit" className="submit">Add</button>
     </form>
   </Layout>
 );
