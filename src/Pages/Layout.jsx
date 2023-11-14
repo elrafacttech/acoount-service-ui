@@ -65,6 +65,11 @@ const Layout = ({ children }) => {
                   {children}
                  </>
                  :
+                 (location.pathname === '/addsales') ?
+                 <>
+                  {children}
+                 </>
+                 :
                  <>
                  
                  </>

@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Layout from '../../Pages/Layout'
-import "./Purchase.css"
-import "./AddPurchase.css";
+import "./AddSales.css";
 import { useNavigate } from 'react-router-dom';
 
-const AddPurchase = () => {
+const AddSales = () => {
 const [productName, setProductName] = useState('');
 const [productCategory, setProductCategory] = useState('');
-const [unitsPurchased, setUnitsPurchased] = useState('');
-const [unitCost, setUnitCost] = useState('');
+const [unitsSold, setUnitsSold] = useState('');
+const [unitPrice, setUnitPrice] = useState('');
+const [invoiceValue, setInvoiceValue] = useState('');
 const [vat, setVat] = useState('');
 const [paymentReceipt, setPaymentReceipt] = useState('');
 
@@ -22,8 +22,9 @@ const handleFormSubmit = async (e) => {
     const response = await axios.post('https://your-backend-api.com/purchase', {
       productName,
       productCategory,
-      unitsPurchased,
-      unitCost,
+      unitsSold,
+      unitPrice,
+      invoiceValue,
       vat,
       paymentReceipt,
     });
@@ -61,23 +62,33 @@ return (
       />
       <br />
       <br />
-      <label htmlFor="unitsPurchased" class="lableStyle-unitpurc">Units Purchased:</label>
+      <label htmlFor="unitsSold" class="lableStyle-unitpurc">Units Sold:</label>
       <input class="form-group" 
         type="text"
-        id="unitsPurchased"
-        name="unitsPurchased"
-        value={unitsPurchased}
-        onChange={(e) => setUnitsPurchased(e.target.value)}
+        id="unitsSold"
+        name="unitsSold"
+        value={unitsSold}
+        onChange={(e) => setUnitsSold(e.target.value)}
       />
       <br />
       <br />
-      <label htmlFor="unitCost" class="lableStyle-unitcost">Unit cost:</label>
+      <label htmlFor="unitPrice" class="lableStyle-unitcost">Unit Price:</label>
       <input class="form-group" 
         type="text"
-        id="unitCost"
-        name="unitCost"
-        value={unitCost}
-        onChange={(e) => setUnitCost(e.target.value)}
+        id="unitPrice"
+        name="unitPrice"
+        value={unitPrice}
+        onChange={(e) => setUnitPrice(e.target.value)}
+      />
+      <br />
+      <br />
+      <label htmlFor="invoiceValue" class="lableStyle-unitcost">Invoice Value:</label>
+      <input class="form-group" 
+        type="text"
+        id="invoiceValue"
+        name="invoiceValue"
+        value={invoiceValue}
+        onChange={(e) => setInvoiceValue(e.target.value)}
       />
       <br />
       <br />
@@ -106,4 +117,4 @@ return (
   </Layout>
 );
 };
-export default AddPurchase
+export default AddSales

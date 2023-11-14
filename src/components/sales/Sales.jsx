@@ -1,11 +1,12 @@
 import React, { useState ,useEffect} from 'react';
 import axios from 'axios';
 import Layout from '../../Pages/Layout'
+import { useNavigate } from 'react-router-dom';
 
 const Sales = () => {
 
   const[sales,setSales] = useState([])
-
+  const  navigate = useNavigate()
   useEffect(() => {
     // Make API call when the component mounts or when selectedOptions.column1 changes
   
@@ -22,11 +23,20 @@ const Sales = () => {
   }
     , []);
 
+    const handleAddSales=()=>{
+
+      navigate('/addsales')
+      
+      }
+
   return (
     <Layout>
 
       <section className="container mx-auto p- font-mono">
         <div className="w-full mb-8 overflow-hidden rounded-lg shadow-lg">
+        <div>
+           <button className="button" onClick={handleAddSales} >add</button>
+          </div>
           <div className="w-full overflow-x-auto">
             <table className="w-full">
               <thead>
