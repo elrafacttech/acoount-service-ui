@@ -13,34 +13,48 @@
     width: 50%;
     padding: 2px 20px;
     background-color: #f2f2f2;
+    border-radius: 10px;
+   
   }
   .lableStyle-name {
     width: 50%;
     padding-right: 55px ;
+    border-radius: 10px;
+    
   }
   .lableStyle-cat {
     width: 50%;
     padding-right: 35px ;
+    border-radius: 10px;
+  
   }
-  .lableStyle-unitpurc {
+  .lableStyle-unitsold {
     width: 50%;
-    padding-right: 41px ;
+    padding-right: 85px ;
+    border-radius: 10px;
+   
   }
-  .lableStyle-unitcost {
+  .lableStyle-unitprice {
     width: 50%;
-    padding-right: 90px ;
+    padding-right: 120px ;
+  
+
   }
   .lableStyle-vat {
     width: 50%;
-    padding-right: 125px ;
+    padding-right: 130px ;
+    border-radius: 10px;
+   
   }
   .lableStyle-cash {
     width: 50%;
-    padding-right: 70px ;
+    padding-right: 75px ;
+    border-radius: 10px;
   }
   .lableStyle{
     width: 50%;
-    padding-right: 55px ;
+    padding-right: 65px ;
+    border-radius: 5px;
   }
 
   .submit {

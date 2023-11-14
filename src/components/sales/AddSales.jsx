@@ -42,8 +42,8 @@ const handleFormSubmit = async (e) => {
 return (
   <Layout>
     <form onSubmit={handleFormSubmit}>
-      <label htmlFor="productName" class="lableStyle-name">Product Name:</label>
-      <input  class="form-group"  
+      <label htmlFor="productName" className="lableStyle-name">Product Name:</label>
+      <input  className="form-group"  
         type="text"
         id="productName"
         name="productName"
@@ -52,8 +52,8 @@ return (
       />
       <br />
       <br />
-      <label htmlFor="productCategory" class="lableStyle-cat">Product Category:</label>
-      <input class="form-group" 
+      <label htmlFor="productCategory" className="lableStyle-cat">Product Category:</label>
+      <input className="form-group" 
         type="text"
         id="productCategory"
         name="productCategory"
@@ -62,8 +62,8 @@ return (
       />
       <br />
       <br />
-      <label htmlFor="unitsSold" class="lableStyle-unitpurc">Units Sold:</label>
-      <input class="form-group" 
+      <label htmlFor="unitsSold" className="lableStyle-unitsold">Units Sold:</label>
+      <input className="form-group" 
         type="text"
         id="unitsSold"
         name="unitsSold"
@@ -72,18 +72,18 @@ return (
       />
       <br />
       <br />
-      <label htmlFor="unitPrice" class="lableStyle-unitcost">Unit Price:</label>
-      <input class="form-group" 
+      <label htmlFor="unitPrice" className="lableStyle-unitprice">Unit Price:</label>
+      <input className="form-group" 
         type="text"
-        id="unitPrice"
-        name="unitPrice"
+        id="unitssPrice"
+        name="unitsPrice"
         value={unitPrice}
         onChange={(e) => setUnitPrice(e.target.value)}
       />
       <br />
       <br />
-      <label htmlFor="invoiceValue" class="lableStyle-unitcost">Invoice Value:</label>
-      <input class="form-group" 
+      <label htmlFor="invoiceValue" className="lableStyle">Invoice Value:</label>
+      <input className="form-group" 
         type="text"
         id="invoiceValue"
         name="invoiceValue"
@@ -92,8 +92,8 @@ return (
       />
       <br />
       <br />
-      <label htmlFor="vat" class="lableStyle-vat">VAT:</label>
-      <input class="form-group" 
+      <label htmlFor="vat" className="lableStyle-vat">VAT:</label>
+      <input className="form-group" 
         type="text"
         id="vat"
         name="vat"
@@ -102,8 +102,8 @@ return (
       />
       <br />
       <br />
-      <label htmlFor="paymentReceipt" class="lableStyle-cash">Cash/Credit:</label>
-      <input class="form-group" 
+      <label htmlFor="paymentReceipt" className="lableStyle-cash">Cash/Credit:</label>
+      <input className="form-group" 
         type="text"
         id="paymentReceipt"
         name="paymentReceipt"
@@ -112,7 +112,7 @@ return (
       />
       <br />
       <br />
-      <button type="submit" class="submit">Add</button>
+      <button type="submit" className="submit">Add</button>
     </form>
   </Layout>
 );
