@@ -21,7 +21,9 @@ const Accounts = () => {
 
   const [startDate, setStartDate] = useState(null);
   const [endDate, setEndDate] = useState(null);
-  const [revenueOptions, setRevenueOptions] = useState([]);
+  const [firstdropdownOptions, setfirstdropdownOptions] = useState([]);
+  const [costOfGoodsOptions, setcostOfGoodsOptions] = useState([]);
+  
 
   const handleStartDateChange = (date) => {
     setStartDate(date);
@@ -39,7 +41,7 @@ const Accounts = () => {
     axios.get('http://localhost:9090/v1/api/business/revenueTransaction/getAll')
       .then(response => {
         // Update revenueOptions state with the API response data
-        setRevenueOptions(response.data);
+        firstdropdownOptions(response.data);
         console.log(response.data);
       })
       .catch(error => {
@@ -48,6 +50,22 @@ const Accounts = () => {
   }
     , []);
 
+    useEffect(() => {
+      // Make API call when the component mounts or when selectedOptions.column1 changes
+  
+      // Make an API call using Axios
+      axios.get('http://localhost:9090/v1/api/business/revenueTransaction/getAll')
+        .then(response => {
+          // Update revenueOptions state with the API response data
+          setcostOfGoodsOptions(response.data);
+          console.log(response.data);
+        })
+        .catch(error => {
+          console.error('Error fetching revenue options:', error);
+        });
+    }
+      , []);
+
   return (
     <Layout>
       <div className="accounts-table-container" style={{ textAlign: 'center' }}>
@@ -55,40 +73,38 @@ const Accounts = () => {
         <table className="w-full text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400 ">
           <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400 ">
             <tr>
-              <th>Accounts:</th>
-              <th>Code:</th>
-              <th>D/C</th>
-              <th>Date</th>
+              <th className="px-4 py-3 text-sm border ">Accounts:</th>
+              <th className="px-4 py-3 text-sm border ">Code:</th>
+              <th className="px-4 py-3 text-sm border ">D/C</th>
+              <th className="px-4 py-3 text-sm border ">Date</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
+            <tr  className="px-4 py-3 text-sm border ">
               <td>
-                <select value={selectedOptions.column1} onChange={(e) => handleOptionChange(e, 'column1')}>
-                  <option value="Revenue">Revenue</option>
-                  {revenueOptions.map(option => (
+                <select  className="px-4 py-3 text-sm border " value={selectedOptions.column1} onChange={(e) => handleOptionChange(e, 'column1')}>
+                <option value="Revenue">Revenue</option>
+                  <option value="COGS">COGS</option>
+                  <option value="operation Expenses">Operation Expenses</option>
+                </select>
+              </td>
+              <td>
+                <select  className="px-4 py-3 text-sm border " value={selectedOptions.column2} onChange={(e) => handleOptionChange(e, 'column2')}>
+                  {firstdropdownOptions.map(option => (
                     <option key={option.code} value={option.codeDescription}>
                       {option.revenueTransactionId}
                     </option>
-                  ))}
+                  ))};
                 </select>
               </td>
-              <td>
-                <select value={selectedOptions.column2} onChange={(e) => handleOptionChange(e, 'column2')}>
-                  <option value="value1"> 1</option>
-                  <option value="value2">Option 2</option>
-                  <option value="value3">Option 3</option>
+              <td >
+                <select  className="px-4 py-3 text-sm border " value={selectedOptions.column3} onChange={(e) => handleOptionChange(e, 'column3')}>
+                  <option value="Debit">Debit</option>
+                  <option value="Credit">Credit</option>
                 </select>
               </td>
-              <td>
-                <select value={selectedOptions.column3} onChange={(e) => handleOptionChange(e, 'column3')}>
-                  <option value="Option 1">Option 1</option>
-                  <option value="Option 2">Option 2</option>
-                  <option value="Option 3">Option 3</option>
-                </select>
-              </td>
-              <td>
-                <label>From:</label>
+              <td >
+                <label className="px-4 py-3 text-sm border ">From:</label>
                 <DatePicker
                   selected={startDate}
                   onChange={handleStartDateChange}
@@ -98,7 +114,7 @@ const Accounts = () => {
                   dateFormat="MM/dd/yyyy"
                   placeholderText="Select start date"
                 />
-                <label>To:</label>
+                <label className="px-4 py-3 text-sm border ">To:</label>
                 <DatePicker
                   selected={endDate}
                   onChange={handleEndDateChange}

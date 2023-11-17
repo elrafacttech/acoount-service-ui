@@ -10,6 +10,8 @@ import { Income_Statement } from "./components/income_statement/Income_Statement
 import Report from "./components/report/Report"
 import AddPurchase from "./components/purchase/AddPurchase"
 import AddSales from "./components/sales/AddSales"
+import { SignUp } from "./Pages/Signup"
+
 
 function App() {
   return (
@@ -18,6 +20,7 @@ function App() {
         <Routes>
         
             <Route path='/' element={<Login />} />
+            <Route path='/signup' element={<SignUp/>}/>
             <Route path='/dashboard' element={<Dashboard />} />
             <Route path='/organisation-details' element={<Organisation_Details />} />
             <Route path='/sales' element={<Sales />} />
