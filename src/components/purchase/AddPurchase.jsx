@@ -10,10 +10,11 @@ const [productName, setProductName] = useState('');
 const [productCategory, setProductCategory] = useState('');
 const [units, setUnits] = useState('');
 const [unitCost, setUnitCost] = useState('');
+const [invoiceValue,setInvoiceValue] = useState('');
 const [VatAppliable,setVatAppliable] = useState('');
 const [vat, setVat] = useState('');
 const [paymentReceipt, setPaymentReceipt] = useState('');
-const [inovice,setInovice] =useState('');
+const [invoice,setInvoice] =useState('');
 const [customer,setCustomer] =useState('');
 const [otherTaxes,setOtherTaxes] = useState('');
 const [total,setTotal]=useState('');
@@ -23,15 +24,25 @@ const navigate = useNavigate();
 const handleFormSubmit = async (e) => {
   e.preventDefault();
 
+  useEffect(() => {
+    const calculatedInvoiceValue = units * unitCost;
+    setInvoiceValue(calculatedInvoiceValue);
+  }, [units, unitCost])
+
   try {
     const response = await axios.post('https://your-backend-api.com/purchase', {
       productName,
       productCategory,
       units,
       unitCost,
+      invoiceValue,
       VatAppliable,
       vat,
       paymentReceipt,
+      invoice,
+      customer,
+      otherTaxes,
+      total,
     });
 
     // Assuming your backend responds with data after successful submission
@@ -48,7 +59,7 @@ return (
   <Layout>
     <form onSubmit={handleFormSubmit}>
       <label htmlFor="productName" className="lableStyle-name">Product Name:</label>
-      <select  class="form-group"  
+      <select  className="form-group"  
         type="text"
         id="productName"
         name="productName"
@@ -63,7 +74,7 @@ return (
       <br />
       <br />
       <label htmlFor="productCategory" className="lableStyle-cat">Product Category:</label>
-      <select class="form-group" 
+      <select className="form-group" 
         type="text"
         id="productCategory"
         name="productCategory"
@@ -77,7 +88,7 @@ return (
       <br />
       <br />
       <label htmlFor="units" className="lableStyle-units">Units:</label>
-      <input class="form-group" 
+      <input className="form-group" 
         type="text"
         id="units"
         name="units"
@@ -87,7 +98,7 @@ return (
       <br />
       <br />
       <label htmlFor="unitCost" className="lableStyle-unitcost">Unit cost:</label>
-      <input class="form-group" 
+      <input className="form-group" 
         type="text"
         id="unitCost"
         name="unitCost"
@@ -96,8 +107,18 @@ return (
       />
       <br />
       <br />
+      <label htmlFor="invoiceValue" className="lableStyle-invoiceValue">InvoiceValue:</label>
+      <input className="form-group" 
+        type="text"
+        id="invoiceValue"
+        name="uninvoiceValueitCost"
+        value={invoiceValue}
+        onChange={(e) => setInvoiceValue(e.target.value)}
+      />
+      <br />
+      <br />
       <label htmlFor="VatAppliable" className="lableStyle-VatApplicable">VAT Applicable:</label>
-      <select class="form-group" 
+      <select className="form-group" 
         type="text"
         id="VatAppliable"
         name="VatAppliable"
@@ -111,7 +132,7 @@ return (
       <br />
       <br />
       <label htmlFor="vat" className="lableStyle-vat">VAT:</label>
-      <input class="form-group" 
+      <input className="form-group" 
         type="text"
         id="vat"
         name="vat"
@@ -121,7 +142,7 @@ return (
       <br />
       <br />
       <label htmlFor="paymentReceipt" className="lableStyle-paymentReceipt">Payment Type:</label>
-      <select class="form-group" 
+      <select className="form-group" 
         type="text"
         id="paymentReceipt"
         name="paymentReceipt"
@@ -134,18 +155,18 @@ return (
       </select>
       <br />
       <br />
-      <label htmlFor="inovice" className="lableStyle-inovice">Inovice:</label>
-      <input class="form-group" 
+      <label htmlFor="invoice" className="lableStyle-invoice">Invoice:</label>
+      <input className="form-group" 
         type="text"
-        id="inovice"
-        name="inovice"
-        value={inovice}
-        onChange={(e) => setInovice(e.target.value)}
+        id="invoice"
+        name="invoice"
+        value={invoice}
+        onChange={(e) => setInvoice(e.target.value)}
       />
       <br />
       <br />
       <label htmlFor="customer" className="lableStyle-customer">Customer:</label>
-      <input class="form-group" 
+      <input className="form-group" 
         type="text"
         id="customer"
         name="customer"
@@ -155,7 +176,7 @@ return (
       <br />
       <br />
       <label htmlFor="otherTaxes" className="lableStyle-otherTaxes">OtherTaxes:</label>
-      <input class="form-group" 
+      <input className="form-group" 
         type="text"
         id="otherTaxes"
         name="otherTaxes"
@@ -165,7 +186,7 @@ return (
       <br />
       <br />
       <label htmlFor="total" className="lableStyle-total">Total:</label>
-      <input class="form-group" 
+      <input className="form-group" 
         type="text"
         id="total"
         name="total"

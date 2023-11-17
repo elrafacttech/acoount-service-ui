@@ -16,73 +16,73 @@
   }
   .lableStyle-name {
     width: 50%;
-    padding-right: 55px ;
+    padding-right: 100px ;
     border-radius: 10px;
     
   }
   .lableStyle-cat {
     width: 50%;
-    padding-right: 35px ;
+    padding-right: 78px ;
     border-radius: 10px;
   
   }
   .lableStyle-units{
     width: 50%;
-    padding-right: 123px;
+    padding-right: 165px;
     border-radius: 10px;
   }
 
   .lableStyle-unitprice{
     width: 50%;
-    padding-right: 92px;
+    padding-right: 135px;
     border-radius: 10px;
   }
 
   .lableStyle-invoiceValue{
     width: 50%;
-    padding-right: 64px;
+    padding-right: 108px;
     border-radius: 10px;
   }
 
   .lableStyle-VatAppliable{
     width: 50%;
-    padding-right: 55px;
+    padding-right: 100px;
     border-radius: 10px;
   }
 
   .lableStyle-vat{
     width: 50%;
-    padding-right: 124px;
+    padding-right: 100px;
     border-radius: 10px;
   }
 
   .lableStyle-paymentReceipt{
     width: 50%;
-    padding-right: 50px;
+    padding-right: 100px;
     border-radius: 10px;
   }
 
   .lableStyle-invoice{
     width: 50%;
-    padding-right: 98px;
+    padding-right: 100px;
     border-radius: 10px;
   }
 
   .lableStyle-customer{
     width: 50%;
-    padding-right: 78px;
+    padding-right: 100px;
     border-radius: 10px;
   }
 
   .lableStyle-otherTaxes{
     width: 50%;
-    padding-right: 75px;
+    padding-right: 100px;
     border-radius: 10px;
   }
 
   .lableStyle-total{
     width: 50%;
-    padding-right: 109px;
+    padding-right: 100px;
     border-radius: 10px;
   }
 

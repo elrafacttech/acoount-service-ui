@@ -28,9 +28,9 @@ const handleFormSubmit = async (e) => {
 
 
   useEffect(() => {
-    const calculatedInvoiceValue = unitsSold * unitPrice;
+    const calculatedInvoiceValue = units * unitPrice;
     setInvoiceValue(calculatedInvoiceValue);
-  }, [unitsSold, unitPrice]);
+  }, [units, unitPrice]);
 
 
 
