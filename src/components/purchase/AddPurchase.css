@@ -24,7 +24,7 @@
     padding-right: 30px ;
     border-radius: 10px;
   }
-  .lableStyle-unitpurc {
+  .lableStyle-units {
     width: 50%;
     padding-right: 48px ;
     border-radius: 10px;
@@ -34,17 +34,48 @@
     padding-right: 95px ;
     border-radius: 10px;
   }
-  .lableStyle-vat {
+  .lableStyle-inoviceValue {
     width: 50%;
     padding-right: 125px ;
     border-radius: 10px;
   }
-  .lableStyle-cash {
+  .lableStyle-VatApplicable {
     width: 50%;
-    padding-right: 70px ;
+    padding-right: 50px ;
     border-radius: 10px;
   }
-  .lableStyle{
+  .lableStyle-vat{
+    width: 50%;
+    padding-right: 55px ;
+    border-radius: 10px;
+  }
+
+  .lableStyle-paymentReceipt{
+    width: 50%;
+    padding-right: 55px ;
+    border-radius: 10px;
+  }
+
+  .lableStyle-inovice{
+    width: 50%;
+    padding-right: 100px ;
+    border-radius: 10px;
+  }
+
+
+  .lableStyle-customer{
+    width: 50%;
+    padding-right: 55px ;
+    border-radius: 10px;
+  }
+
+  .lableStyle-otherTaxes{
+    width: 50%;
+    padding-right: 55px ;
+    border-radius: 10px;
+  }
+
+  .lableStyle-total{
     width: 50%;
     padding-right: 55px ;
     border-radius: 10px;

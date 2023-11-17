@@ -26,34 +26,66 @@
     border-radius: 10px;
   
   }
-  .lableStyle-unitsold {
+  .lableStyle-units{
     width: 50%;
-    padding-right: 85px ;
+    padding-right: 123px;
     border-radius: 10px;
-   
   }
-  .lableStyle-unitprice {
-    width: 50%;
-    padding-right: 120px ;
-  
 
-  }
-  .lableStyle-vat {
+  .lableStyle-unitprice{
     width: 50%;
-    padding-right: 130px ;
-    border-radius: 10px;
-   
-  }
-  .lableStyle-cash {
-    width: 50%;
-    padding-right: 75px ;
+    padding-right: 92px;
     border-radius: 10px;
   }
-  .lableStyle{
+
+  .lableStyle-invoiceValue{
     width: 50%;
-    padding-right: 65px ;
-    border-radius: 5px;
+    padding-right: 64px;
+    border-radius: 10px;
   }
+
+  .lableStyle-VatAppliable{
+    width: 50%;
+    padding-right: 55px;
+    border-radius: 10px;
+  }
+
+  .lableStyle-vat{
+    width: 50%;
+    padding-right: 124px;
+    border-radius: 10px;
+  }
+
+  .lableStyle-paymentReceipt{
+    width: 50%;
+    padding-right: 50px;
+    border-radius: 10px;
+  }
+
+  .lableStyle-invoice{
+    width: 50%;
+    padding-right: 98px;
+    border-radius: 10px;
+  }
+
+  .lableStyle-customer{
+    width: 50%;
+    padding-right: 78px;
+    border-radius: 10px;
+  }
+
+  .lableStyle-otherTaxes{
+    width: 50%;
+    padding-right: 75px;
+    border-radius: 10px;
+  }
+
+  .lableStyle-total{
+    width: 50%;
+    padding-right: 109px;
+    border-radius: 10px;
+  }
+
 
   .submit {
     background-color: #45a049;
